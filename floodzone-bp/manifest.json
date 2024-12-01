@@ -1,0 +1,33 @@
+{
+    "format_version": 2,
+    "header": {
+      "name": "Floodzone Behavior Pack",
+      "description": "Behavior pack for floodzone land protection",
+      "uuid": "7f681bee-c5e0-46d5-a935-f2b73c8815bc",
+      "version": [1, 0, 0],
+      "min_engine_version": [1, 15, 0],
+      "permissions": ["script_eval"]
+    },
+    "modules": [
+      {
+        "description": "floodzone land protection",
+        "type": "script",
+        "language": "Javascript",
+        "uuid": "6d1cefee-19d4-44e3-b6e5-e43bd1042ed7",
+        "version": [1, 0, 0],
+        "entry": "scripts/main.js"
+      }
+    ],
+    "dependencies": [
+      {
+        "module_name": "@minecraft/server",
+        "version": "1.15.0"
+      }
+    ],
+    "metadata": {
+      "authors": ["github.com/d-flood"],
+      "generated_with": {
+        "blockception-minecraft-bedrock": ["8.0.14"]
+      }
+    }
+  }
