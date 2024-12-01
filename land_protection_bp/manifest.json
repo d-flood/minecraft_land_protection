@@ -1,8 +1,8 @@
 {
     "format_version": 2,
     "header": {
-      "name": "Floodzone Behavior Pack",
-      "description": "Behavior pack for floodzone land protection",
+      "name": "Land Protection Behavior Pack",
+      "description": "Behavior pack for land protection bedrock addon",
       "uuid": "7f681bee-c5e0-46d5-a935-f2b73c8815bc",
       "version": [1, 0, 0],
       "min_engine_version": [1, 15, 0],
@@ -10,7 +10,7 @@
     },
     "modules": [
       {
-        "description": "floodzone land protection",
+        "description": "land protection scripts",
         "type": "script",
         "language": "Javascript",
         "uuid": "6d1cefee-19d4-44e3-b6e5-e43bd1042ed7",
