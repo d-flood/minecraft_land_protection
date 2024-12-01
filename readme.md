@@ -30,7 +30,7 @@ This has already prevented conflict.
 - Explosions that would affect a protected area, _even if originating outside the protected area_, will be cancelled.
 
 ## How to install on a bedrock server
-1. Add the `./floodzone-bp` directory from this repo to the `./behavior_packs/` directory of your bedrock server.
+1. Add the `.land_protection_bp/` directory from this repo to the `./behavior_packs/` directory of your bedrock server.
 2. Then create a file at `./worlds/YOUR_WORLD_NAME/world_behavior_packs.json` with the following contents:
     ```json
     [
