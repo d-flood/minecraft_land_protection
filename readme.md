@@ -1,8 +1,10 @@
 # A minecraft bedrock addon for protecting an area of land
 
-I have kids who like to play minecraft together. Sometimes real life conflict occurs because someone takes items from a chest or messes up someone's house. This addon enables each player to claim one piece of land at a time. Only the owner of the land my place or interact in any way with blocks in their protected area.
+_An afternoon project for reducing real life conflict from in game behavior._
 
-For example, a non-owner cannot open chests or doors, break blocks, place blocks, etc. Even better, if an explosion takes place _outside_ of the protected area, but if it will affect a protected block, then the explosion is cancelled.
+## Description
+
+I have kids who like to play Minecraft together. Sometimes their time is ruined because someone takes items from a chest or messes up someone's house. This addon enables each player to claim one piece of land at a time. Only the owner of the land my place or interact in any way with blocks in their protected area. The idea is that each player can have a safe place.
 
 This has already prevented conflict.
 
@@ -16,7 +18,7 @@ This has already prevented conflict.
     - Each player will see the boarder at whatever height/depth they are at.
 3. To move the protected area, simply repeat #1 and the previous protected area will be removed and a new one created.
 
-**Rules**
+**Protection Rules**
 - Only an owner can interact with blocks in a protected area. This includes:
     - breaking blocks
     - placing blocks
@@ -55,4 +57,4 @@ This has already prevented conflict.
     ]
     ```
 
-This was a three hour weekend project.
+This was a three hour Saturday project. I'm happy to review and accept PRs, but keep in mind it has a narrow focus and that I do not actually know much or play much Minecraft.
