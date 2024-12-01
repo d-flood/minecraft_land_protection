@@ -1,13 +1,10 @@
 import { world, system } from '@minecraft/server';
 
-// Store points for each player
 const playerPoints = new Map();
-// Store protected areas
 let protectedAreas = [];
-// Store overworld dimension
 const overworld = world.getDimension("overworld");
 
-// Initialize dynamic property
+// Initialize dynamic property; i.e., persistent storage
 world.getDynamicProperty('protectedAreas') ?? world.setDynamicProperty('protectedAreas', '[]');
 
 // Load stored protected areas
@@ -32,7 +29,6 @@ world.beforeEvents.itemUse.subscribe((event) => {
     player.sendMessage(`Point ${points.length} set at (${block.x}, ${block.z})`);
     
     if (points.length === 4) {
-        // Calculate area bounds
         const minX = Math.min(...points.map(p => p.x));
         const maxX = Math.max(...points.map(p => p.x));
         const minZ = Math.min(...points.map(p => p.z));
@@ -157,7 +153,7 @@ function spawnBorderParticles(area) {
             // Only spawn particles if player's chunk is loaded
             if (!isChunkLoaded(overworld, player.location.x, player.location.z)) continue;
 
-            // eep particles at player eye level or minimum of 2 blocks above ground
+            // eep particles at player eye level or minimum of 1 blocks above ground
             const y = Math.max(Math.floor(player.location.y), player.location.y + 1);
             
             // Calculate distance to area corners
@@ -204,7 +200,6 @@ function spawnBorderParticles(area) {
     }
 }
 
-// Reduce update frequency to every 10 ticks
 system.runInterval(() => {
     for (const area of protectedAreas) {
         spawnBorderParticles(area);
